@@ -22,7 +22,7 @@ defined('ABSPATH') || exit;
                 <div class="h4">Links</div>
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu1')); ?>
             </div>
-            <div class="col-6 col-lg-3 text-center text-md-start">
+            <div class="col-md-6 col-lg-3">
                 <div class="h4">Contact</div>
                 <ul class="fa-ul">
                     <li><span class="fa-li"><i class="fa-solid fa-phone text-light"></i></span>
@@ -33,7 +33,7 @@ defined('ABSPATH') || exit;
                     </li>
                 </ul>
             </div>
-            <div class="col-6 col-lg-3 text-center text-md-start">
+            <div class="col-md-6 col-lg-3">
                 <div class="h4">Connect</div>
                 <div class="social-icons">
                     <?=do_shortcode('[social_icons]')?>
