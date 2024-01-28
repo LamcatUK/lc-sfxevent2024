@@ -1,0 +1,11 @@
+.banner {
+    background-color: var(--col-primary);
+    color: var(--col-light);
+    padding-block: 1.5rem;
+    span {
+        color: var(--col-blue-400);
+    }
+    h2 {
+        margin-bottom: 0;
+    }
+}
