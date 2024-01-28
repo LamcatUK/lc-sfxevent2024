@@ -8,7 +8,7 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-define('LC_THEME_DIR', WP_CONTENT_DIR . '/themes/lc-sfx2024');
+define('LC_THEME_DIR', WP_CONTENT_DIR . '/themes/lc-sfxevent2024');
 
 require_once LC_THEME_DIR . '/inc/lc-theme.php';
 
