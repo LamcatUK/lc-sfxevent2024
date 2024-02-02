@@ -40,6 +40,15 @@ function acf_blocks()
             'supports' => array('mode' => false),
         ));
         acf_register_block_type(array(
+            'name'				=> 'lc_full_text',
+            'title'				=> __('LC Full Text'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/lc_full_text.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
             'name'				=> 'lc_faqs',
             'title'				=> __('LC FAQs'),
             'category'			=> 'layout',
