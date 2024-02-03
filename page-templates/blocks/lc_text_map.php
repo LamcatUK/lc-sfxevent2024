@@ -53,7 +53,7 @@ if (get_field('link') ?? null) {
 $map_url = get_field('map_url');
 
 ?>
-                <iframe src="<?=$map_url?>" width="600" height="450"
+                <iframe src="<?=$map_url?>" width="100%" height="500"
                     style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>

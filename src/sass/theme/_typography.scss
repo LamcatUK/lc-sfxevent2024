@@ -119,3 +119,12 @@ sup {
     background-color: var(--col-highlight);
     color: var(--col-primary-900);
 }
+
+main a:not([class]):not(footer a) {
+    color: var(--col-red-400);
+    font-weight: var(--fw-900);
+    transition: color var(--transition);
+    &:hover {
+        color: var(--col-blue-400);
+    }
+}
