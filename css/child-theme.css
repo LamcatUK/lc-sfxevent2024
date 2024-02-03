@@ -23135,7 +23135,7 @@ footer .current_page_item a {
   margin-bottom: 0;
 }
 
-.feature__image {
+.feature__img {
   aspect-ratio: 16/9;
   -o-object-fit: cover;
   object-fit: cover;
