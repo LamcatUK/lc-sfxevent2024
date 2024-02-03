@@ -31,6 +31,7 @@ add_action('wp_enqueue_scripts', 'understrap_remove_scripts', 20);
  */
 function add_child_theme_textdomain()
 {
+    // add_theme_support('align-wide');
     load_child_theme_textdomain('lc-sfxevent2024', get_stylesheet_directory() . '/languages');
 }
 add_action('after_setup_theme', 'add_child_theme_textdomain');
