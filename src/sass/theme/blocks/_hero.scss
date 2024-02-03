@@ -69,7 +69,9 @@
     }
 
     h1 {
-        filter: drop-shadow(2px 4px 6px var(--col-primary-400));
+        // filter: drop-shadow(2px 4px 6px var(--col-red-400));
+        color: white;
+        text-shadow: 0 10px white, 0 0 10px var(--col-red-400), 0 0 15px var(--col-blue-400);
     }
     &__title {
         font-size: var(--fs-900);
