@@ -1,6 +1,6 @@
 <?php
 $bg = wp_get_attachment_image_url(get_field('background'), 'full');
-$classes = $block['className'] ?: 'pb-5';
+$classes = $block['className'] ?? 'pb-5';
 ?>
 <section class="hero <?=$classes?>"
     style="background-image: url(<?=$bg?>)">

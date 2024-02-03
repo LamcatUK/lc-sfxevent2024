@@ -274,7 +274,9 @@ add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
 function add_admin_link($items, $args)
 {
     if ($args->theme_location == 'primary_nav') {
-        $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a class="btn btn-red" title="Buy Tickets" href="/event/">Buy Tickets</a></li>';
+        if (isset(get_field('tickets_available', 'options')[0]) && get_field('tickets_available', 'options')[0] == 'Yes') {
+            $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a class="btn btn-red" title="Buy Tickets" href="/event/">Buy Tickets</a></li>';
+        }
         $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a class="btn btn-red" title="Register to Fight" href="/register/">Register to Fight</a></li>';
     }
     return $items;

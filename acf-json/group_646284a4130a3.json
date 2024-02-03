@@ -60,6 +60,31 @@
             "append": ""
         },
         {
+            "key": "field_65be5e65fa3b9",
+            "label": "Tickets Available",
+            "name": "tickets_available",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Yes": "Yes"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
             "key": "field_6462855531267",
             "label": "Social",
             "name": "",
@@ -312,5 +337,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706451773
+    "modified": 1706974847
 }

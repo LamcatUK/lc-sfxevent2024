@@ -7,11 +7,21 @@ $classes = $block['className'] ?? 'py-5';
     while(have_rows('buttons')) {
         the_row();
         $l = get_sub_field('link');
-        ?>
+        if (preg_match('/tickets/i', $l['title'])) {
+            if (isset(get_field('tickets_available', 'options')[0]) && get_field('tickets_available', 'options')[0] == 'Yes') {
+                ?>
         <a href="<?=$l['url']?>"
             class="btn btn-red"
             target="<?=$l['target']?>"><?=$l['title']?></a>
         <?php
+            }
+        } else {
+            ?>
+        <a href="<?=$l['url']?>"
+            class="btn btn-red"
+            target="<?=$l['target']?>"><?=$l['title']?></a>
+        <?php
+        }
     }
 ?>
     </div>

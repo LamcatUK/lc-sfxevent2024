@@ -45,11 +45,13 @@
                     <?php
                         $t = get_field('tickets_link') ?? null;
                         if ($t) {
-                            ?>
+                            if (isset(get_field('tickets_available', 'options')[0]) && get_field('tickets_available', 'options')[0] == 'Yes') {
+                                ?>
                     <a href="<?=$t['url']?>"
                         target="<?=$t['target']?>"
                         class="btn btn-red"><?=$t['title']?></a>
                     <?php
+                            }
                         }
                         $r = get_field('fighter_registration_link') ?? null;
                         if ($r) {
