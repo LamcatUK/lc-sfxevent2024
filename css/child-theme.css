@@ -23135,6 +23135,14 @@ footer .current_page_item a {
   margin-bottom: 0;
 }
 
+.feature__image {
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
 a,
 a.noline {
   text-decoration: none;
