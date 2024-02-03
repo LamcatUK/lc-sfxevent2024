@@ -23070,7 +23070,7 @@ footer .current_page_item a {
 }
 .hero h1, .hero .h1 {
   color: white;
-  text-shadow: 0 0 10px white, 0 0 10px var(--col-red-400), 0 0 15px var(--col-blue-400);
+  text-shadow: 0 0 10px white, 2px 0 10px var(--col-red-400), -2px 0 15px var(--col-blue-400);
 }
 .hero__title {
   font-size: var(--fs-900);
