@@ -8,8 +8,10 @@ $imganim = get_field('order') == 'text' ? 'fade-left' : 'fade-right';
 $txtanim = 'fade';
 $imganim = 'fade';
 
+$classes = $block['className'] ?? 'py-5';
+
 ?>
-<section class="feature py-5">
+<section class="feature <?=$classes?>">
     <div class="container-xl">
         <?php
         if (get_field('title') ?? null) {
@@ -37,6 +39,16 @@ $imganim = 'fade';
                 <?php
 if (get_field('link') ?? null) {
     $l = get_field('link');
+
+    $tickets_available = get_field('tickets_available', 'options');
+
+    if (preg_match('/tickets/i', $l['title'])) {
+
+        if (!isset(get_field('tickets_available', 'options')[0]) || get_field('tickets_available', 'options')[0] != 'Yes') {
+
+            $l['title'] = 'Find out more';
+        }
+    }
     ?>
                 <a href="<?=$l['url']?>"
                     target="<?=$l['target']?>"
