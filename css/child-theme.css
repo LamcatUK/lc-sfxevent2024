@@ -23047,6 +23047,8 @@ footer .current_page_item a {
   display: grid;
   place-content: center;
   text-align: center;
+  color: white;
+  text-shadow: 0 0 10px white, 2px 0 10px var(--col-red-400), -2px 0 15px var(--col-blue-400);
 }
 
 .hero {
