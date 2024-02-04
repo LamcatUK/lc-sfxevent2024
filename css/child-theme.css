@@ -23195,6 +23195,27 @@ footer .current_page_item a {
   display: none;
 }
 
+.three_images__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.three_images__image {
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .three_images__image {
+    flex: 0 0 33.3%;
+    max-width: 33.3%;
+  }
+}
+
 a,
 a.noline {
   text-decoration: none;
