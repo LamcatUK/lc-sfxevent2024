@@ -23198,7 +23198,7 @@ footer .current_page_item a {
 .three_images__grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0;
+  gap: 1rem;
 }
 .three_images__image {
   aspect-ratio: 4/3;
