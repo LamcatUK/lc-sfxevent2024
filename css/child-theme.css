@@ -23179,6 +23179,19 @@ footer .current_page_item a {
   background-color: #000;
   color: var(--col-light);
 }
+.signup .wpcf7 input[type=submit] {
+  min-width: auto;
+  background-color: var(--col-blue-400);
+  color: var(--col-light);
+  padding-top: 8px;
+  padding-bottom: 5px;
+}
+.signup input[type=email] {
+  border-radius: 0;
+}
+.signup .wpcf7-spinner {
+  display: none;
+}
 
 a,
 a.noline {
