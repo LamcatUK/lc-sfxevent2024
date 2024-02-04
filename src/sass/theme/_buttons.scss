@@ -1,17 +1,25 @@
 .btn {
     border-radius: 0;
-}
-.btn-red {
     align-self: flex-start;
     min-width: 300px;
-    background-color: var(--col-red-400);
-    color: var(--col-light);
     font-weight: var(--fw-900);
     font-family: var(--ff-headlines);
     font-size: var(--fs-400);
     padding-top: 10px;
     text-transform: uppercase;
+}
+.btn-red {
+    background-color: var(--col-red-400);
+    color: var(--col-light);
     &:hover {
         background-color: color-mix(in srgb, var(--col-red-400), #fff 20%);
     }
 }
+.btn-blue {
+    background-color: var(--col-blue-400);
+    color: var(--col-light);
+    &:hover {
+        background-color: color-mix(in srgb, var(--col-blue-400), #fff 20%);
+    }
+}
+

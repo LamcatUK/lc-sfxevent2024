@@ -19,9 +19,17 @@ defined('ABSPATH') || exit;
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1">
     <meta name="view-transition" content="same-origin">
     <link rel="preload"
-        href="<?=get_stylesheet_directory_uri()?>/fonts/adrianna-300.woff2 "
+        href="<?=get_stylesheet_directory_uri()?>/fonts/poster-gothic-excond-atf-400.woff2 "
         as="font" type="font/woff2" crossorigin="anonymous">
-
+    <link rel="preload"
+        href="<?=get_stylesheet_directory_uri()?>/fonts/poster-gothic-excond-atf-700.woff2 "
+        as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload"
+        href="<?=get_stylesheet_directory_uri()?>/fonts/urw-din-arabic-300.woff2 "
+        as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload"
+        href="<?=get_stylesheet_directory_uri()?>/fonts/urw-din-arabic-regular.woff2 "
+        as="font" type="font/woff2" crossorigin="anonymous">
     <?php
     if (get_field('ga_property', 'options')) {
         ?>
