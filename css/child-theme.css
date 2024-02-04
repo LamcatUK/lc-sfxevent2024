@@ -23185,9 +23185,11 @@ footer .current_page_item a {
   color: var(--col-light);
   padding-top: 8px;
   padding-bottom: 5px;
+  height: 42px;
 }
 .signup input[type=email] {
   border-radius: 0;
+  height: 42px;
 }
 .signup .wpcf7-spinner {
   display: none;

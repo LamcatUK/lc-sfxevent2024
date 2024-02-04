@@ -8,9 +8,11 @@
         color: var(--col-light);
         padding-top: 8px;
         padding-bottom: 5px;
+        height: 42px;
     }
     input[type=email] {
         border-radius: 0;
+        height: 42px;
     }
     .wpcf7-spinner {
         display: none;
