@@ -12,7 +12,7 @@
         max-width: 100%;
         @media (min-width: 768px) {
             flex: 0 0 33.3%;
-            max-width: 33.3%;
+            max-width: calc(33.3% - 0.66rem);
         }
     }
       

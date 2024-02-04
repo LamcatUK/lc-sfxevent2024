@@ -23212,7 +23212,7 @@ footer .current_page_item a {
 @media (min-width: 768px) {
   .three_images__image {
     flex: 0 0 33.3%;
-    max-width: 33.3%;
+    max-width: calc(33.3% - 0.66rem);
   }
 }
 
