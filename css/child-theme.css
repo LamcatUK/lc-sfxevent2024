@@ -22858,13 +22858,13 @@ sup {
 }
 
 ::-moz-selection {
-  background-color: var(--col-highlight);
-  color: var(--col-primary-900);
+  background-color: var(--col-red-400);
+  color: var(--col-light);
 }
 
 ::selection {
-  background-color: var(--col-highlight);
-  color: var(--col-primary-900);
+  background-color: var(--col-red-400);
+  color: var(--col-light);
 }
 
 main a:not([class]):not(footer a) {
@@ -23214,6 +23214,13 @@ footer .current_page_item a {
     flex: 0 0 33.3%;
     max-width: calc(33.3% - 0.66rem);
   }
+}
+
+.logos__card img {
+  display: block;
+  max-width: 160px;
+  height: auto;
+  margin: auto;
 }
 
 a,

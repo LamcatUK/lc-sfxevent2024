@@ -116,8 +116,8 @@ sup {
 }
 
 ::selection {
-    background-color: var(--col-highlight);
-    color: var(--col-primary-900);
+    background-color: var(--col-red-400);
+    color: var(--col-light);
 }
 
 main a:not([class]):not(footer a) {
