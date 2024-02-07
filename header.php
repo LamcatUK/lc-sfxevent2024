@@ -72,6 +72,7 @@ if (get_field('gtm_property', 'options')) {
         );
     </script>
     <!-- End Google Tag Manager -->
+    <meta property="og:image" content="<?=get_stylesheet_directory_uri()?>/img/sfx-og-image.png" />
     <?php
 }
 if (get_field('google_site_verification', 'options')) {
@@ -83,8 +84,6 @@ if (get_field('bing_site_verification', 'options')) {
 
 wp_head();
 ?>
-	<meta property="og:image" content="<?=get_stylesheet_directory_uri()?>/img/sfx-og-image.png" />
-
 </head>
 
 <body <?php body_class(); ?>
