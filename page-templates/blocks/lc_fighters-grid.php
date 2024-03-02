@@ -34,7 +34,8 @@
 
 $q = new WP_Query(array(
     'post_type' => 'fighter',
-    'posts_per_page' => -1
+    'posts_per_page' => -1,
+    'orderby' => 'rand'
 ));
 
             while ($q->have_posts()) {
