@@ -84,6 +84,82 @@ if (get_field('footage') ?? null) {
                 </section>
                 <?php
 }
+
+// related
+
+$current_post_id = get_the_ID();
+
+$terms = wp_get_post_terms($current_post_id, 'weight-class', array("fields" => "slugs"));
+
+if (!empty($terms)) {
+    $args = array(
+        'post_type' => 'fighter',
+        'post_status' => 'publish',
+        'posts_per_page' => 3,
+        'post__not_in' => array($current_post_id),
+        'orderby' => 'rand',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'weight-class',
+                'field'    => 'slug',
+                'terms'    => $terms,
+            ),
+        ),
+    );
+    $q = new WP_Query($args);
+
+    if ($q->have_posts()) {
+        echo '<section class="related fighters"><h2 class="h3">Related Fighters</h2><div class="fighters__grid">';
+        while ($q->have_posts()) {
+            $q->the_post();
+            $class = get_the_terms($q->ID, 'weight-class');
+            $img = get_the_post_thumbnail_url($q->ID, 'large') ?: '/wp-content/themes/lc-sfxevent2024/img/missing.png';
+
+            ?>
+                <a class="fighters__card"
+                    href="<?=get_the_permalink($q->ID)?>">
+                    <img src="<?=$img?>"
+                        alt="<?=get_the_title()?>">
+                    <div class="fighters__card_inner">
+                        <div class="card__name">
+                            <?=get_the_title($q->ID)?>
+                        </div>
+                        <?php
+                        $local = get_field('location', get_the_ID()) ?? null;
+            $country = get_field('country', get_the_ID()) ?? null;
+            ?>
+                        <div class="card__location">
+                            <div>
+                                <?php
+                            if ($local) {
+                                echo $local . ', ';
+                            }
+            ?>
+                                <?=$country?>
+                            </div>
+                            <div>
+                                <?php
+            if (get_field('cc', get_the_ID()) ?? null) {
+                ?>
+                                <img class="flag-img"
+                                    src="https://flagicons.lipis.dev/flags/4x3/<?=strtolower(get_field('cc', get_the_ID()))?>.svg"
+                                    alt="">
+                                <?php
+            }
+            ?>
+                            </div>
+                        </div>
+                        <div class="card__weight">
+                            <?=trim(preg_replace('/\s*\([^)]*\)/', '', get_field('weight_class', get_the_ID())->name))?>
+                        </div>
+                    </div>
+                </a>
+                <?php
+        }
+        echo '</div></section>';
+    }
+}
+
 ?>
             </div>
             <div class="col-md-3">
