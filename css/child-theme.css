@@ -23030,6 +23030,103 @@ footer .current_page_item a {
   background-color: color-mix(in srgb, var(--col-blue-400), #fff 20%);
 }
 
+.fighter .follow h3, .fighter .follow .h3 {
+  font-family: var(--ff-headlines);
+  color: var(--col-primary-900);
+  font-size: var(--fs-500);
+  display: inline;
+  margin-bottom: 0;
+  -webkit-margin-end: 1rem;
+  margin-inline-end: 1rem;
+}
+.fighter .follow a {
+  color: var(--col-primary-900);
+  font-size: var(--fs-500);
+}
+.fighter .follow a:hover {
+  color: var(--col-primary-400);
+}
+.fighter__title {
+  font-family: var(--ff-headlines);
+  font-size: var(--fs-700);
+  font-weight: var(--fw-900);
+  color: var(--col-light);
+  margin-bottom: 0;
+}
+.fighter__age, .fighter__style, .fighter__experience {
+  display: grid;
+  grid-template-columns: 100px auto;
+}
+
+.profile_card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 4rem 1fr;
+  grid-template-areas: "image header" "image stats";
+  background-color: var(--col-primary);
+  color: var(--col-light);
+}
+.profile_card__image {
+  grid-area: image;
+  aspect-ratio: 3/4;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.profile_card__header {
+  grid-area: header;
+  padding: 1rem 1.5rem 0.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.profile_card__country {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.profile_card__country .country {
+  font-size: var(--fs-300);
+  color: var(--col-blue-400);
+  font-family: var(--ff-headlines);
+  font-weight: var(--fw-900);
+}
+.profile_card__country .city {
+  color: var(--col-light);
+  font-family: var(--ff-headlines);
+  font-weight: var(--fw-600);
+}
+.profile_card__stats {
+  padding: 1rem 1.5rem 0.5rem 1.5rem;
+}
+.profile_card__stats .headline {
+  font-size: var(--fs-500);
+}
+
+.sidebar .event_hero {
+  font-family: var(--ff-headlines);
+  text-align: center;
+}
+.sidebar .event_hero__name {
+  font-size: var(--fs-500);
+}
+.sidebar .event_hero__date {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-900);
+}
+.sidebar .event_hero__location {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-900);
+}
+.sidebar .event_hero .countdown-title {
+  font-size: var(--fs-300);
+}
+.sidebar__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .event_hero__name,
 .date_hero__name {
   font-size: var(--fs-600);
@@ -23221,6 +23318,84 @@ footer .current_page_item a {
   max-width: 160px;
   height: auto;
   margin: auto;
+}
+
+.fighters__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.fighters__card {
+  background-color: var(--col-primary);
+  border: 2px solid var(--col-red-400);
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+}
+.fighters__card img {
+  aspect-ratio: 3/4;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.fighters__card_inner {
+  padding: 0.5rem 1rem;
+  display: grid;
+}
+.fighters__card_inner > * {
+  align-self: center;
+}
+.fighters .card__name {
+  color: var(--col-light);
+  font-family: var(--ff-headlines);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-900);
+  line-height: 1.1;
+}
+.fighters .card__weight {
+  color: var(--col-light);
+  font-size: var(--fs-300);
+}
+.fighters .card__location {
+  color: var(--col-light);
+  font-family: var(--ff-headlines);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-600);
+  line-height: 1.1;
+  display: flex;
+  justify-content: space-between;
+}
+.fighters .card__location > * {
+  align-self: center;
+}
+.fighters .card__location .flag-img {
+  aspect-ratio: 4/3;
+  width: 40px;
+}
+.fighters__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: -moz-max-content;
+  width: max-content;
+  margin-inline: auto;
+  gap: 1rem;
+  border-top: 2px solid var(--col-red-400);
+  border-bottom: 2px solid var(--col-red-400);
+}
+.fighters__filters .filter-button {
+  border: 0;
+  background-color: transparent;
+  font-family: var(--ff-headlines);
+  font-weight: var(--fw-900);
+  font-size: var(--fs-400);
+  color: var(--bs-gray-600);
+  padding-inline: 1rem;
+}
+.fighters__filters .is-checked {
+  background-color: var(--col-red-400);
+  color: var(--col-light);
 }
 
 a,
