@@ -109,7 +109,7 @@ if (!empty($terms)) {
     $q = new WP_Query($args);
 
     if ($q->have_posts()) {
-        echo '<section class="related fighters"><h2 class="h3">Related Fighters</h2><div class="fighters__grid">';
+        echo '<section class="related fighters"><hr><h2 class="h3">Related Fighters</h2><div class="fighters__grid">';
         while ($q->have_posts()) {
             $q->the_post();
             $class = get_the_terms($q->ID, 'weight-class');

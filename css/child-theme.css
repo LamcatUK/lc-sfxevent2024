@@ -23062,6 +23062,7 @@ footer .current_page_item a {
   top: 95px;
   background-color: var(--col-light);
   font-size: var(--fs-300);
+  z-index: 1;
 }
 
 .profile_card {
