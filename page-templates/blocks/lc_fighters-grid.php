@@ -40,12 +40,13 @@ $q = new WP_Query(array(
             while ($q->have_posts()) {
                 $q->the_post();
                 $class = get_the_terms($q->ID, 'weight-class');
+                $img = get_the_post_thumbnail_url($q->ID, 'large') ?: '/wp-content/themes/lc-sfxevent2024/img/missing.png';
                 ?>
             <div
                 class="item grid-sizer col-md-6 col-lg-4 p-2 <?=$class[0]->slug?>">
                 <a class="fighters__card"
                     href="<?=get_the_permalink()?>">
-                    <img src="<?=get_the_post_thumbnail_url($q->ID, 'large')?>"
+                    <img src="<?=$img?>"
                         alt="<?=get_the_title()?>">
                     <div class="fighters__card_inner">
                         <div class="card__name">

@@ -2,7 +2,7 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 get_header();
-$img = get_the_post_thumbnail_url(get_the_ID(), 'full') ?? '/wp-content/themes/lc-sfxevent2024/img/missing.png';
+$img = get_the_post_thumbnail_url(get_the_ID(), 'full') ?: '/wp-content/themes/lc-sfxevent2024/img/missing.png';
 ?>
 <main id="main" class="fighter">
     <div class="container-xl pb-5">
