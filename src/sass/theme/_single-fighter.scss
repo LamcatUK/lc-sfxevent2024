@@ -32,6 +32,13 @@
         grid-template-columns: 100px auto;
     }
 
+    .breadcrumbs {
+        position: sticky;
+        top: 95px;
+        background-color: var(--col-light);
+        font-size: var(--fs-300);
+    }
+
 }
     
 .profile_card {
@@ -84,6 +91,8 @@
 }
 
 .sidebar {
+    position: sticky;
+    top: 100px;
     .event_hero {
         font-family: var(--ff-headlines);
         text-align: center;

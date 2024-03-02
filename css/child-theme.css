@@ -23057,6 +23057,12 @@ footer .current_page_item a {
   display: grid;
   grid-template-columns: 100px auto;
 }
+.fighter .breadcrumbs {
+  position: sticky;
+  top: 95px;
+  background-color: var(--col-light);
+  font-size: var(--fs-300);
+}
 
 .profile_card {
   display: grid;
@@ -23103,6 +23109,10 @@ footer .current_page_item a {
   font-size: var(--fs-500);
 }
 
+.sidebar {
+  position: sticky;
+  top: 100px;
+}
 .sidebar .event_hero {
   font-family: var(--ff-headlines);
   text-align: center;
