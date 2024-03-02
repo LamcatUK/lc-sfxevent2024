@@ -57,18 +57,22 @@ $q = new WP_Query(array(
                 ?>
                         <div class="card__location">
                             <div>
-                                <?=$local?>,
+                                <?php
+                                if ($local) {
+                                    echo $local . ', ';
+                                }
+                ?>
                                 <?=$country?>
                             </div>
                             <div>
                                 <?php
-                                if (get_field('cc', get_the_ID()) ?? null) {
-                                    ?>
+                if (get_field('cc', get_the_ID()) ?? null) {
+                    ?>
                                 <img class="flag-img"
                                     src="https://flagicons.lipis.dev/flags/4x3/<?=strtolower(get_field('cc', get_the_ID()))?>.svg"
                                     alt="">
                                 <?php
-                                }
+                }
                 ?>
                             </div>
                         </div>

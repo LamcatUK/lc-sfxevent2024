@@ -27,9 +27,15 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
                                 <div class="country">
                                     <?=get_field('country')?>
                                 </div>
+                                <?php
+                                if (get_field('location') ?? null) {
+                                    ?>
                                 <div class="city">
                                     <?=get_field('location')?>
                                 </div>
+                                <?php
+                                }
+?>
                             </div>
                             <div class="flag">
                                 <img class="flag-img"
