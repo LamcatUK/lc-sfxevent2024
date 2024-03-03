@@ -148,3 +148,21 @@
         }
     }
 }
+
+.related {
+    @media (max-width:767px) {
+        .fighters__grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+        .fighters__card {
+            grid-template-columns: 1fr;
+        }
+        .fighters__card:nth-of-type(3) {
+            display: none;
+        }
+        .card__name {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
