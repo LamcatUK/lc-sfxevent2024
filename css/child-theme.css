@@ -23147,7 +23147,7 @@ footer .current_page_item a {
 
 .sidebar {
   position: sticky;
-  top: 100px;
+  top: 135px;
 }
 .sidebar .event_hero {
   font-family: var(--ff-headlines);
@@ -23174,15 +23174,16 @@ footer .current_page_item a {
 }
 .sidebar__buttons > * {
   width: 100%;
+  min-width: unset;
 }
 
 @media (max-width: 767px) {
   .related .fighters__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0.5rem;
   }
   .related .fighters__card {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 4fr;
   }
   .related .fighters__card:nth-of-type(3) {
     display: none;
