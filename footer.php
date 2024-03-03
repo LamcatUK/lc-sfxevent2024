@@ -13,7 +13,7 @@ defined('ABSPATH') || exit;
 ?>
 <footer class="footer pt-4">
     <div class="container-xl">
-        <div class="row pb-2 pb-lg-4 mx-0">
+        <div class="row g-4 pb-2 pb-lg-4 mx-0">
             <div class="col-md-6 col-lg-3 mb-2 text-center text-md-start">
                 <img src="<?=get_stylesheet_directory_uri()?>/img/sfx-full--wo.svg"
                     alt="" width=268 height=150>
