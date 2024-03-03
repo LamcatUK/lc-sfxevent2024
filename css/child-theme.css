@@ -23412,6 +23412,7 @@ footer .current_page_item a {
 .fighters__card img {
   aspect-ratio: 3/4;
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
