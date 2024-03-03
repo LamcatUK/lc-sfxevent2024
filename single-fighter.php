@@ -7,7 +7,7 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full') ?: '/wp-content/themes/l
 <main id="main" class="fighter">
     <div class="container-xl pb-5">
         <div class="breadcrumbs py-2">
-            <a href="/">SFX Championships</a> &raquo; <a href="/fighters/">Fighters</a> &raquo;
+            <a href="/">SFX</a> &raquo; <a href="/fighters/">Fighters</a> &raquo;
             <?=get_the_title()?>
         </div>
         <div class="row g-4">
