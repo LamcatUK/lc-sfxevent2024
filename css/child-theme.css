@@ -23091,7 +23091,7 @@ footer .current_page_item a {
 .profile_card__image {
   grid-area: image;
   aspect-ratio: 3/4;
-  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
