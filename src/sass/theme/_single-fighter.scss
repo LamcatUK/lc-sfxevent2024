@@ -82,7 +82,6 @@
             grid-area: location;
             grid-template-areas: "city country";
             grid-template-columns: min-content;
-            gap: 0.5rem;
             @media (min-width:768px) {
                 grid-template-areas: "country" "city";
             }
@@ -100,6 +99,9 @@
             font-size: var(--fs-300);
             font-family: var(--ff-headlines);
             font-weight: var(--fw-600);
+            @media (max-width:767px) {
+                margin-right: 0.5rem;                
+            }
         }
         .flag {
             grid-area: flag;

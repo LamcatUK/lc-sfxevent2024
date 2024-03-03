@@ -23114,7 +23114,6 @@ footer .current_page_item a {
   grid-area: location;
   grid-template-areas: "city country";
   grid-template-columns: min-content;
-  gap: 0.5rem;
 }
 @media (min-width: 768px) {
   .profile_card__country .profile_card__location {
@@ -23134,6 +23133,11 @@ footer .current_page_item a {
   font-size: var(--fs-300);
   font-family: var(--ff-headlines);
   font-weight: var(--fw-600);
+}
+@media (max-width: 767px) {
+  .profile_card__country .city {
+    margin-right: 0.5rem;
+  }
 }
 .profile_card__country .flag {
   grid-area: flag;
