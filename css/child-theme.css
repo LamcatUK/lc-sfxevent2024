@@ -23086,6 +23086,7 @@ footer .current_page_item a {
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
+  margin-inline: auto;
 }
 .profile_card__header {
   grid-area: header;
