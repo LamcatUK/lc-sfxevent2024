@@ -23067,11 +23067,16 @@ footer .current_page_item a {
 
 .profile_card {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 4rem 1fr;
-  grid-template-areas: "image header" "image stats";
+  grid-template-areas: "header" "image" "stats";
   background-color: var(--col-primary);
   color: var(--col-light);
+}
+@media (min-width: 768px) {
+  .profile_card {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 4rem 1fr;
+    grid-template-areas: "image header" "image stats";
+  }
 }
 .profile_card__image {
   grid-area: image;
@@ -23084,26 +23089,56 @@ footer .current_page_item a {
 }
 .profile_card__header {
   grid-area: header;
-  padding: 1rem 1.5rem 0.5rem 1.5rem;
+  padding: 0.5rem;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+}
+@media (min-width: 768px) {
+  .profile_card__header {
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+    grid-template-columns: 2fr 1fr;
+  }
 }
 .profile_card__country {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "location flag";
+  grid-template-columns: auto 40px;
+}
+@media (min-width: 768px) {
+  .profile_card__country {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+.profile_card__country .profile_card__location {
+  display: grid;
+  grid-area: location;
+  grid-template-areas: "city country";
+  grid-template-columns: min-content;
+  gap: 0.5rem;
+}
+@media (min-width: 768px) {
+  .profile_card__country .profile_card__location {
+    grid-template-areas: "country" "city";
+  }
 }
 .profile_card__country .country {
+  grid-area: country;
   font-size: var(--fs-300);
   color: var(--col-blue-400);
   font-family: var(--ff-headlines);
   font-weight: var(--fw-900);
 }
 .profile_card__country .city {
+  grid-area: city;
   color: var(--col-light);
+  font-size: var(--fs-300);
   font-family: var(--ff-headlines);
   font-weight: var(--fw-600);
 }
+.profile_card__country .flag {
+  grid-area: flag;
+}
 .profile_card__stats {
+  grid-area: stats;
   padding: 1rem 1.5rem 0.5rem 1.5rem;
 }
 .profile_card__stats .headline {
@@ -23136,6 +23171,9 @@ footer .current_page_item a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+.sidebar__buttons > * {
+  width: 100%;
 }
 
 .event_hero__name,

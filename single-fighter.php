@@ -23,7 +23,7 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full') ?: '/wp-content/themes/l
                             </h1>
                         </div>
                         <div class="profile_card__country">
-                            <div>
+                            <div class="profile_card__location">
                                 <div class="country">
                                     <?=get_field('country')?>
                                 </div>
