@@ -22941,7 +22941,7 @@ main a:not([class]):not(footer a):hover {
 .navbar a[aria-current=page] {
   color: var(--col-blue-400);
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar #main-menu {
     margin-top: 0.5rem;
     text-align: center;
