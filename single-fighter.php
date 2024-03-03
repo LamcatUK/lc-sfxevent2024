@@ -10,7 +10,7 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full') ?: '/wp-content/themes/l
             <a href="/">SFX Championships</a> &raquo; <a href="/fighters/">Fighters</a> &raquo;
             <?=get_the_title()?>
         </div>
-        <div class="row">
+        <div class="row g-4">
             <div class="col-md-9">
                 <div class="profile_card">
                     <img src="<?=$img?>"

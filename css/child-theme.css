@@ -23185,9 +23185,6 @@ footer .current_page_item a {
   .related .fighters__card {
     grid-template-columns: 1fr 4fr;
   }
-  .related .fighters__card:nth-of-type(3) {
-    display: none;
-  }
   .related .card__name {
     margin-bottom: 0.5rem;
   }

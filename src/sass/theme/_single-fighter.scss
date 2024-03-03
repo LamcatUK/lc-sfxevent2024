@@ -159,9 +159,6 @@
         .fighters__card {
             grid-template-columns: 1fr 4fr;
         }
-        .fighters__card:nth-of-type(3) {
-            display: none;
-        }
         .card__name {
             margin-bottom: 0.5rem;
         }
