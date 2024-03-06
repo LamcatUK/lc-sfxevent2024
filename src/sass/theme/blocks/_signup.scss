@@ -17,4 +17,17 @@
     .wpcf7-spinner {
         display: none;
     }
+
+
+    .gform_wrapper {
+        max-width: 600px;
+        margin-inline: auto;
+    }
+    .gform_wrapper.gravity-theme #field_submit {
+        display: block;
+    }
+    .gform-button {
+        @extend .btn;
+        @extend .btn-blue;
+    }
 }
