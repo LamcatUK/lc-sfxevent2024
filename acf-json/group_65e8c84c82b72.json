@@ -1,10 +1,10 @@
 {
-    "key": "group_65bfa43d3e084",
-    "title": "LC Signup (CF7)",
+    "key": "group_65e8c84c82b72",
+    "title": "LC Signup (GF)",
     "fields": [
         {
-            "key": "field_65bfa43d73263",
-            "label": "LC Signup (CF7)",
+            "key": "field_65e8c84c8856f",
+            "label": "LC Signup (GF)",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -21,7 +21,7 @@
             "esc_html": 0
         },
         {
-            "key": "field_65bfa44873264",
+            "key": "field_65e8c84c8c0bd",
             "label": "Form ID",
             "name": "form_id",
             "aria-label": "",
@@ -46,7 +46,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/lc-signnup"
+                "value": "acf\/lc-signnup-gf"
             }
         ]
     ],
@@ -59,5 +59,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709754476
+    "modified": 1709754485
 }

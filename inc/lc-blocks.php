@@ -86,10 +86,19 @@ function acf_blocks()
         ));
         acf_register_block_type(array(
             'name'				=> 'lc_signnup',
-            'title'				=> __('LC Signup'),
+            'title'				=> __('LC Signup (CF7)'),
             'category'			=> 'layout',
             'icon'				=> 'cover-image',
             'render_template'	=> 'page-templates/blocks/lc_signup.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'				=> 'lc_signnup_gf',
+            'title'				=> __('LC Signup (GF)'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/lc_signup_gf.php',
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
