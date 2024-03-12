@@ -1,0 +1,146 @@
+{
+    "key": "group_65f09abd08a66",
+    "title": "LC Fight Card",
+    "fields": [
+        {
+            "key": "field_65f09abd3265a",
+            "label": "LC Fight Card",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_65f09aef3265d",
+            "label": "Fight Card",
+            "name": "fight_card",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65f09d08edc16",
+                    "label": "Fight Title",
+                    "name": "fight_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65f09aef3265d"
+                },
+                {
+                    "key": "field_65f09acd3265b",
+                    "label": "Fighter 1",
+                    "name": "fighter_1",
+                    "aria-label": "",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "fighter"
+                    ],
+                    "post_status": "",
+                    "taxonomy": "",
+                    "filters": [
+                        "search",
+                        "taxonomy"
+                    ],
+                    "return_format": "id",
+                    "min": 1,
+                    "max": 1,
+                    "elements": "",
+                    "parent_repeater": "field_65f09aef3265d"
+                },
+                {
+                    "key": "field_65f09ae93265c",
+                    "label": "Fighter 2",
+                    "name": "fighter_2",
+                    "aria-label": "",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "fighter"
+                    ],
+                    "post_status": "",
+                    "taxonomy": "",
+                    "filters": [
+                        "search",
+                        "taxonomy"
+                    ],
+                    "return_format": "object",
+                    "min": 1,
+                    "max": 1,
+                    "elements": "",
+                    "parent_repeater": "field_65f09aef3265d"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/lc-fight-card"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1710269860
+}

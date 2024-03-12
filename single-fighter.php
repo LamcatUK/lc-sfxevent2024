@@ -63,6 +63,12 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full') ?: '/wp-content/themes/l
                                 <?=get_field('training')?>
                             </div>
                         </div>
+                        <div class="fighter__experience">
+                            <div class="headline">Weight</div>
+                            <div>
+                                <?=get_field('weight_class')->name?>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <?php

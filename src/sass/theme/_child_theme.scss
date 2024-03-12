@@ -26,6 +26,13 @@ a.anchor {
     }
 }
 
+.grid-span-2 {
+    grid-column: span 2;
+}
+.grid-span-3 {
+    grid-column: span 3;
+}
+
 a {
     color: var(--col-highlight);
     &:hover {

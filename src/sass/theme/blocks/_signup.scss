@@ -23,6 +23,9 @@
         max-width: 600px;
         margin-inline: auto;
     }
+    .gform_wrapper.gravity-theme .gform_fields {
+        grid-column-gap: 0;
+    }
     .gform_wrapper.gravity-theme #field_submit {
         display: block;
     }

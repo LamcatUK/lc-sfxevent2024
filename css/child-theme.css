@@ -23393,6 +23393,9 @@ footer .current_page_item a {
   max-width: 600px;
   margin-inline: auto;
 }
+.signup .gform_wrapper.gravity-theme .gform_fields {
+  grid-column-gap: 0;
+}
 .signup .gform_wrapper.gravity-theme #field_submit {
   display: block;
 }
@@ -23503,6 +23506,61 @@ footer .current_page_item a {
   color: var(--col-light);
 }
 
+.fight_card__card {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  background-color: var(--col-primary);
+  border: 2px solid var(--col-red-400);
+  padding: 1rem;
+  text-align: center;
+  color: var(--col-light);
+  min-height: 500px;
+  position: relative;
+}
+.fight_card__card .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity var(--transition);
+}
+.fight_card .card__image {
+  margin-bottom: 0.5rem;
+}
+.fight_card .card__image img {
+  width: 180px;
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  background-color: white;
+}
+.fight_card .card__name {
+  font-family: var(--ff-headlines);
+  color: var(--col-light);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-900);
+}
+.fight_card .card__gap {
+  font-family: var(--ff-headlines);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-900);
+}
+.fight_card .card__title {
+  background-color: firebrick;
+  color: var(--col-light);
+  font-family: var(--ff-headlines);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-900);
+  padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.glide__slide--active .overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
 a,
 a.noline {
   text-decoration: none;
@@ -23524,6 +23582,14 @@ a.anchor {
     columns: 3;
   }
 }
+.grid-span-2 {
+  grid-column: span 2;
+}
+
+.grid-span-3 {
+  grid-column: span 3;
+}
+
 a {
   color: var(--col-highlight);
 }
