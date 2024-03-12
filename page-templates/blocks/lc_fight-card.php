@@ -1,4 +1,7 @@
-<div class="container-xl">
+<?php
+$classes = $block['classList'] ?? 'py-5';
+?>
+<div class="container-xl <?=$classes?>">
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
@@ -94,7 +97,7 @@ if (get_sub_field('fight_title') != '') {
                 </li>
                 <?php
 }
-                ?>
+?>
             </ul>
         </div>
     </div>
@@ -118,4 +121,4 @@ add_action('wp_footer', function () {
 </script>
 <?php
 }, 9999);
-                ?>
+?>
