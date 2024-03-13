@@ -82,7 +82,7 @@ $q = new WP_Query(array(
                             <div>
                                 <?=get_field('combat_style', get_the_ID())?>
                             </div>
-                            <?=trim(preg_replace('/\s*\([^)]*\)/', '', get_field('weight_class', get_the_ID())->name))?>
+                            <strong><?=trim(preg_replace('/\s*\([^)]*\)/', '', get_field('weight_class', get_the_ID())->name))?></strong>
                         </div>
                     </div>
                 </a>
