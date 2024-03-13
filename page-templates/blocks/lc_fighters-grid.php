@@ -79,6 +79,9 @@ $q = new WP_Query(array(
                             </div>
                         </div>
                         <div class="card__weight">
+                            <div>
+                                <?=get_field('combat_style', get_the_ID())?>
+                            </div>
                             <?=trim(preg_replace('/\s*\([^)]*\)/', '', get_field('weight_class', get_the_ID())->name))?>
                         </div>
                     </div>

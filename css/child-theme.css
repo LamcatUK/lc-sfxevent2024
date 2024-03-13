@@ -23463,7 +23463,7 @@ footer .current_page_item a {
 }
 .fighters .card__weight {
   color: var(--col-light);
-  font-size: var(--fs-300);
+  font-size: var(--fs-200);
 }
 .fighters .card__location {
   color: var(--col-light);
