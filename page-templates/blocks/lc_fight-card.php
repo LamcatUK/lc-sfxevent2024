@@ -150,6 +150,7 @@ add_action('wp_footer', function () {
         type: 'carousel',
         perView: 1.5,
         focusAt: 'center',
+        autoplay: 3000,
         breakpoints: {
             1024: {
                 perView: 1
