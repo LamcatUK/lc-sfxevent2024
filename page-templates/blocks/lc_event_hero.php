@@ -44,17 +44,21 @@
                 <div class="event_hero__buttons">
                     <?php
                         $t = get_field('tickets_link') ?? null;
-                        if ($t) {
-                            if (isset(get_field('tickets_available', 'options')[0]) && get_field('tickets_available', 'options')[0] == 'Yes') {
-                                ?>
+                        $r = get_field('fighter_registration_link') ?? null;
+
+                        if (isset(get_field('tickets_on_sale', 'options')[0]) && get_field('tickets_on_sale', 'options')[0] == 'Yes') {
+                            ?>
+                    <a href="<?=get_field('tickets_url', 'options')?>"
+                        target="_blank" class="btn btn-red">Buy Tickets</a>
+                    <?php
+                        } elseif (isset(get_field('tickets_available', 'options')[0]) && get_field('tickets_available', 'options')[0] == 'Yes') {
+                            ?>
                     <a href="<?=$t['url']?>"
                         target="<?=$t['target']?>"
                         class="btn btn-red"><?=$t['title']?></a>
                     <?php
-                            }
                         }
-                        $r = get_field('fighter_registration_link') ?? null;
-                        if ($r) {
+                        if (isset(get_field('registration_open', 'options')[0]) && get_field('registration_open', 'options')[0] == 'Yes') {
                             ?>
                     <a href="<?=$r['url']?>"
                         target="<?=$r['target']?>"

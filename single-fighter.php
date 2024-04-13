@@ -225,8 +225,23 @@ echo do_shortcode("[countdown id='cnt' year='{$timeUntil['YEARS']}' month='{$tim
                     </div>
                     <div class="sidebar__buttons">
                         <a class="btn btn-blue" title="Event Info" href="/event/">Event Info</a>
-                        <a class="btn btn-red" title="Buy Tickets" href="/event/">Buy Tickets</a>
+                        <?php
+                        if (isset(get_field('tickets_on_sale', 'options')[0]) && get_field('tickets_on_sale', 'options')[0] == 'Yes') {
+                            ?>
+                        <a href="<?=get_field('tickets_url', 'options')?>"
+                            target="_blank" class="btn btn-red">Buy Tickets</a>
+                        <?php
+                        } elseif (isset(get_field('tickets_available', 'options')[0]) && get_field('tickets_available', 'options')[0] == 'Yes') {
+                            ?>
+                        <a href="/event/" class="btn btn-red">Buy Tickets</a>
+                        <?php
+                        }
+if (isset(get_field('registration_open', 'options')[0]) && get_field('registration_open', 'options')[0] == 'Yes') {
+    ?>
                         <a class="btn btn-red" title="Register to Fight" href="/register/">Register to Fight</a>
+                        <?php
+}
+?>
                         <a class="btn btn-blue" title="SFX Merch" target="_blank"
                             href="https://sfxchampionships.epic-merch.com/">SFX Merch</a>
                     </div>

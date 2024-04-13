@@ -275,10 +275,14 @@ function add_admin_link($items, $args)
 {
     if ($args->theme_location == 'primary_nav') {
         $items .= '<div class="nav-btns">';
-        if (isset(get_field('tickets_available', 'options')[0]) && get_field('tickets_available', 'options')[0] == 'Yes') {
+        if (isset(get_field('tickets_on_sale', 'options')[0]) && get_field('tickets_on_sale', 'options')[0] == 'Yes') {
+            $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a class="btn btn-red" title="Buy Tickets" href="' . get_field('tickets_url', 'options') . '" target="_blank">Buy Tickets</a></li>';
+        } elseif (isset(get_field('tickets_available', 'options')[0]) && get_field('tickets_available', 'options')[0] == 'Yes') {
             $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a class="btn btn-red" title="Buy Tickets" href="/event/">Buy Tickets</a></li>';
         }
-        $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a class="btn btn-red" title="Register to Fight" href="/register/">Register to Fight</a></li>';
+        if (isset(get_field('registration_open', 'options')[0]) && get_field('registration_open', 'options')[0] == 'Yes') {
+            $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a class="btn btn-red" title="Register to Fight" href="/register/">Register to Fight</a></li>';
+        }
         $items .= '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a class="btn btn-blue" title="SFX Merch" target="_blank" href="https://sfxchampionships.epic-merch.com/">SFX Merch</a></li>';
         $items .= '</div>';
     }

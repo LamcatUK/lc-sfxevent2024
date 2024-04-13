@@ -44,16 +44,41 @@ if (get_field('link') ?? null) {
 
     if (preg_match('/tickets/i', $l['title'])) {
 
-        if (!isset(get_field('tickets_available', 'options')[0]) || get_field('tickets_available', 'options')[0] != 'Yes') {
-
-            $l['title'] = 'Find out more';
-        }
-    }
-    ?>
+        if (isset(get_field('tickets_on_sale', 'options')[0]) && get_field('tickets_on_sale', 'options')[0] == 'Yes') {
+            ?>
+                <a href="<?=get_field('tickets_url', 'options')?>"
+                    target="_blank" class="mt-4 btn btn-red text-center align-self-center align-self-md-start">Buy
+                    Tickets</a>
+                <?php
+        } elseif (isset(get_field('tickets_available', 'options')[0]) && get_field('tickets_available', 'options')[0] == 'Yes') {
+            ?>
                 <a href="<?=$l['url']?>"
                     target="<?=$l['target']?>"
                     class="mt-4 btn btn-red text-center align-self-center align-self-md-start"><?=$l['title']?></a>
                 <?php
+        } else {
+            ?>
+                <a href="<?=$l['url']?>"
+                    target="<?=$l['target']?>"
+                    class="mt-4 btn btn-red text-center align-self-center align-self-md-start">Find out more</a>
+                <?php
+        }
+    } elseif (preg_match('/register/i', $l['title'])) {
+        if (isset(get_field('registration_open', 'options')[0]) && get_field('registration_open', 'options')[0] == 'Yes') {
+            ?>
+                <a href="<?=$l['url']?>"
+                    target="<?=$l['target']?>"
+                    class="mt-4 btn btn-red text-center align-self-center align-self-md-start"><?=$l['title']?></a>
+                <?php
+        }
+    } else { // normal button
+        ?>
+                <a href="<?=$l['url']?>"
+                    target="<?=$l['target']?>"
+                    class="mt-4 btn btn-red text-center align-self-center align-self-md-start">XX<?=$l['title']?></a>
+                <?php
+    }
+
 }
 ?>
             </div>
