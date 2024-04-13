@@ -75,7 +75,7 @@ if (get_field('link') ?? null) {
         ?>
                 <a href="<?=$l['url']?>"
                     target="<?=$l['target']?>"
-                    class="mt-4 btn btn-red text-center align-self-center align-self-md-start">XX<?=$l['title']?></a>
+                    class="mt-4 btn btn-red text-center align-self-center align-self-md-start"><?=$l['title']?></a>
                 <?php
     }
 
