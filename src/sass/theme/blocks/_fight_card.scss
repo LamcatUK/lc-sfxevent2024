@@ -57,3 +57,10 @@
         pointer-events: none;
     }
 }
+
+.fight_card_row {
+    a > div {
+        line-height: 1;
+        padding-top: 0.2rem;
+    }
+}

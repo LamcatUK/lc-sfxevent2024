@@ -22916,6 +22916,16 @@ main a:not([class]):not(footer a):hover {
   color: var(--col-primary-900);
 }
 
+.bg-red {
+  background-color: var(--col-red-400);
+  color: white;
+}
+
+.bg-blue {
+  background-color: var(--col-blue-400);
+  color: white;
+}
+
 .navbar {
   background-color: var(--col-primary);
   border-bottom: 2px solid var(--col-red-400);
@@ -23559,6 +23569,11 @@ footer .current_page_item a {
 .glide__slide--active .overlay {
   opacity: 0;
   pointer-events: none;
+}
+
+.fight_card_row a > div {
+  line-height: 1;
+  padding-top: 0.2rem;
 }
 
 a,

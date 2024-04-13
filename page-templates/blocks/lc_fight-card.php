@@ -102,6 +102,44 @@ if (get_sub_field('fight_title') != '') {
         </div>
     </div>
 </div>
+<div class="container-xl fight_card_row">
+    <?php
+
+while (have_rows('fight_card')) {
+    the_row();
+    $f1 = get_sub_field('fighter_1')[0];
+    $f2 = get_sub_field('fighter_2')[0];
+        
+    ?>
+    <div class="row justify-content-center mx-0 mb-4">
+        <div class="col-12 text-center fw-bold mb-2 h2">
+            <?=get_sub_field('fight_title')?>
+        </div>
+        <div class="col-md-5 h3 bg-red p-2">
+            <a class="h-100 d-flex justify-content-center justify-content-md-end align-items-center gap-2"
+                href="<?=get_the_permalink($f1)?>">
+                <img class="flag-img"
+                    src="https://flagicons.lipis.dev/flags/4x3/<?=strtolower(get_field('cc', $f1))?>.svg"
+                    alt="" height="30px" width="40px">
+                <div><?=get_the_title($f1)?></div>
+            </a>
+        </div>
+        <div class="col-md-1 text-center d-flex justify-content-center align-items-center h4">vs</div>
+        <div class="col-md-5 h3 bg-blue p-2">
+            <a class="h-100 d-flex justify-content-center justify-content-md-start align-items-center gap-2"
+                href="<?=get_the_permalink($f2)?>">
+                <img class="flag-img order-md-2"
+                    src="https://flagicons.lipis.dev/flags/4x3/<?=strtolower(get_field('cc', $f2))?>.svg"
+                    alt="" height="30px" width="40px">
+                <div><?=get_the_title($f2)?></div>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <?php
+}
+?>
+</div>
 <?php
 add_action('wp_footer', function () {
     ?>
