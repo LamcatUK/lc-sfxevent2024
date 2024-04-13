@@ -1,6 +1,6 @@
 <section class="fighters mb-2">
     <div class="container-xl bg-white py-4">
-        <div class="d-none d-lg-flex fighters__filters filters-button-group mb-4">
+        <div class="d-none d-xl-flex fighters__filters filters-button-group mb-4">
             <button class="filter-button is-checked" data-filter="*">All Classes</button>
             <?php
             $classes = get_terms('weight-class');
@@ -14,7 +14,7 @@
             }
             ?>
         </div>
-        <select name="filters" id="classFilter" class="form-select d-lg-none mb-4">
+        <select name="filters" id="classFilter" class="form-select d-xl-none mb-4">
             <option value="*">All Classes</option>
             <?php
             if (!empty($classes) && !is_wp_error($classes)) {
