@@ -38,9 +38,7 @@
                             'MI' => $minutes,
                             'SS' => $seconds
                         ];
-                        if ($days == 0 && $hours == 0 && $minutes == 0 && $seconds == 0) {
-                            echo '';
-                        } else {
+                        if ($days >= 0 && $hours >= 0 && $minutes >= 0 && $seconds >= 0) {
                             echo do_shortcode("[countdown id='cnt' year='{$timeUntil['YEARS']}' month='{$timeUntil['MONTHS']}' day='{$timeUntil['DAYS']}' hour='{$timeUntil['HH']}' min='{$timeUntil['MI']}' sec='{$timeUntil['SS']}']");
                         }
                         ?>
